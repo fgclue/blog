@@ -1,0 +1,32 @@
+body {
+    background-color: rgb(19, 13, 8);
+    color: white;
+}
+viewer a {
+    font-family: monospace;
+    color: white;
+    text-decoration: none;
+}
+h1[articlepreview] {
+    font-family: Ubuntu;
+    width: 90%;
+    color: white;
+    margin: auto;
+}
+a[artlink] {
+    color: white;
+    text-decoration: none;
+}
+p[preview] {
+    font-family: Didact Gothic;
+    width: 90%;
+    margin: auto;
+}
+footer a {
+    color: white;
+    font-family: Ubuntu, sans-serif;
+    text-decoration: none;
+}
+footer {
+    text-align: center;
+}
