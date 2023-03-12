@@ -14,8 +14,9 @@ if (id == 1) {
       fetch(location)
         .then(response => response.text())
         .then(markdown => {
-          articleTitle.textContent = title;
-          articleContent.innerHTML = marked(markdown);
+            const titleHtml = `<h1 articlepreview>${title}</h1>`;
+            articleTitle.innerHTML = titleHtml;
+            articleContent.innerHTML = marked(markdown);
         });
     });
 }
