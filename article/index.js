@@ -25,8 +25,9 @@ function parseMarkdown(markdown) {
       .replace(regex.ol, '<li>$2</li>');
   
     markdown = `<ul>${markdown}</ul>`;
-    markdown = markdown.replace(/<li>/gm, '<li>').replace(/<\/li>\s*<li>/gm, '</li><li>');
-  
+    //markdown = markdown.replace(/<li>/gm, '<li>').replace(/<\/li>\s*<li>/gm, '</li><li>');
+    markdown = markdown.replace(/<li>\s+/gm, '<li>\n');
+    
     return markdown;
   }
   
