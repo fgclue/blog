@@ -1,11 +1,8 @@
 var articleTitle = document.getElementById("title");
-var articleContent = document.getElementById("content");
+var articleContent = document.getElementById("article");
 
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get('id');
-
-console.info(articleContent)
-console.info(articleTitle)
 
 function parseMarkdown(markdown) {
     const regex = {
