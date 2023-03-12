@@ -2,6 +2,11 @@ body {
     background-color: rgb(19, 13, 8);
     color: white;
 }
+
+* {
+    outline: 1px solid red;
+}
+
 viewer a {
     font-family: monospace;
     color: white;
