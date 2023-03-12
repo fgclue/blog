@@ -17,7 +17,16 @@ a[artlink] {
     color: white;
     text-decoration: none;
 }
+a[article] {
+    color: white;
+    text-decoration: none;
+}
 p[preview] {
+    font-family: Didact Gothic;
+    width: 90%;
+    margin: auto;
+}
+p[content] {
     font-family: Didact Gothic;
     width: 90%;
     margin: auto;
