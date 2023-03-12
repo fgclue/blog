@@ -4,6 +4,9 @@ var articleContent = document.getElementById("content");
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get('id');
 
+console.info(articleContent)
+console.info(articleTitle)
+
 function parseMarkdown(markdown) {
     const regex = {
       heading: /^(#+) (.*)/gm,
@@ -43,7 +46,7 @@ if (id == 1) {
         .then(markdown => {
             const titleHtml = `<h1 articlepreview>${title}</h1>`;
             articleTitle.innerHTML = titleHtml;
-            articleContent.innerHTML = parseMarkdown(markdown)
+            articleContent.innerHTML = parseMarkdown(markdown);
         });
     });
 }
