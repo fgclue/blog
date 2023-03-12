@@ -4,6 +4,33 @@ var articleContent = document.getElementById("content");
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get('id');
 
+function parseMarkdown(markdown) {
+    const regex = {
+      heading: /^(#+) (.*)/gm,
+      bold: /\*\*(.*)\*\*/gm,
+      italic: /\*(.*)\*/gm,
+      link: /\[(.*)\]\((.*)\)/gm,
+      image: /!\[(.*)\]\((.*)\)/gm,
+      ul: /^-\s(.*)/gm,
+      ol: /^([0-9]+)\.\s(.*)/gm,
+    };
+  
+    markdown = markdown
+      .replace(regex.heading, (_, level, text) => `<h${level.length}>${text}</h${level.length}>`)
+      .replace(regex.bold, '<strong>$1</strong>')
+      .replace(regex.italic, '<em>$1</em>')
+      .replace(regex.link, '<a href="$2">$1</a>')
+      .replace(regex.image, '<img src="$2" alt="$1">')
+      .replace(regex.ul, '<li>$1</li>')
+      .replace(regex.ol, '<li>$2</li>');
+  
+    markdown = `<ul>${markdown}</ul>`;
+    markdown = markdown.replace(/<li>/gm, '<li>').replace(/<\/li>\s*<li>/gm, '</li><li>');
+  
+    return markdown;
+  }
+  
+
 if (id == 1) {
   fetch('/article/article.json')
     .then(response => response.json())
@@ -16,7 +43,7 @@ if (id == 1) {
         .then(markdown => {
             const titleHtml = `<h1 articlepreview>${title}</h1>`;
             articleTitle.innerHTML = titleHtml;
-            articleContent.innerHTML = marked(markdown);
+            articleContent.innerHTML = parseMarkdown(markdown)
         });
     });
 }
