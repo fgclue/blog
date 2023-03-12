@@ -5,7 +5,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get('id');
 
 if (id == 1) {
-  fetch('article/article.json')
+  fetch('/article/article.json')
     .then(response => response.json())
     .then(data => {
       const article = data.articles['1'];
