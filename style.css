@@ -3,10 +3,6 @@ body {
     color: white;
 }
 
-* {
-    outline: 1px solid red;
-}
-
 viewer a {
     font-family: monospace;
     color: white;
