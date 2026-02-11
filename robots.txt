@@ -1,0 +1,32 @@
+---
+layout: null
+sitemap: false
+---
+#     _()            _()
+#    /              /  
+#    \__|----------|___
+#    /   ____  ____   \
+#    |  | █ | | █  |  |    <( No spam please. )
+#    \   \__/  \__/   /
+# ___ \_  /\/\/\/\_/ _/  ___
+# \  \__/            \__/  /
+#  \                      /
+#   \___              ___/
+#      |              |
+#      |   ________   |
+#     _/   |      |   \_
+#    /____/        \____\
+
+User-agent: SemrushBot
+Disallow: /
+Disallow: *
+
+User-agent: Bytespider
+Disallow: /
+Disallow: *
+
+User-agent: Aliens
+Disallow:
+
+User-agent: *
+Disallow:
