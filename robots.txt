@@ -19,11 +19,9 @@ sitemap: false
 
 User-agent: SemrushBot
 Disallow: /
-Disallow: *
 
 User-agent: Bytespider
 Disallow: /
-Disallow: *
 
 User-agent: Aliens
 Disallow:
